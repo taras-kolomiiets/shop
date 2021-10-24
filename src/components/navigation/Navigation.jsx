@@ -5,12 +5,12 @@ const Navigation = () => {
   return (
     <ul className="navigation">
       <li className="navigation__item">
-        <NavLink to="shop" exact>
+        <NavLink to="shop/shop" exact>
           Головна
         </NavLink>
       </li>
       <li className="navigation__item">
-        <NavLink to="cart-list">Корзина</NavLink>
+        <NavLink to="shop/cart-list">Корзина</NavLink>
       </li>
     </ul>
   );
