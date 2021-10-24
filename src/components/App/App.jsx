@@ -80,7 +80,7 @@ const App = () => {
       <Switch>
         <Route
           exact
-          path={["/", "/shop"]}
+          path={"/" && "/shop"}
           render={() => (
             <ShopList
               cartList={cartList}
