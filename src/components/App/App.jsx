@@ -78,7 +78,7 @@ const App = () => {
     <main className="app">
       <Navigation />
       <Route
-        path="/"
+        path="/shop"
         exact
         render={() => (
           <ShopList
