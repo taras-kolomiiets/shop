@@ -36,7 +36,7 @@ const CartList = ({
       )}
     </>
   ) : (
-    <h1>Ваша корзина пуста</h1>
+    <h1 className="header__empty-cart">Ваша корзина пуста!</h1>
   );
 };
 
