@@ -79,7 +79,7 @@ const App = () => {
       <Navigation />
       <Route
         exact
-        path={["/", "/shop/"]}
+        path="/shop/"
         render={() => (
           <ShopList
             cartList={cartList}
