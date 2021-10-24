@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { products } from "../../products";
 import CartList from "../CartList";
 import ShopList from "../ShopList";
@@ -66,10 +66,10 @@ const App = () => {
 
   const deletePurchasedProduct = (id) => {
     setCartList(() => {
-      const getProductIndex = cartList.findIndex(
+      const getProductIndex = storageCartList.findIndex(
         (product) => product.id === id
       );
-      const productInCart = cartList[getProductIndex];
+      const productInCart = storageCartList[getProductIndex];
       setCartList(updateProductInCart(id, -productInCart.count));
     });
   };
@@ -77,32 +77,34 @@ const App = () => {
   return (
     <main className="app">
       <Navigation />
-      <Route
-        exact
-        path="/shop"
-        render={() => (
-          <ShopList
-            cartList={cartList}
-            products={products}
-            addProductInCart={addProductInCart}
-            removeProductFromCart={removeProductFromCart}
-          />
-        )}
-      />
-      <Route
-        path="/cart-list"
-        exact
-        render={() => {
-          return (
-            <CartList
-              storageCartList={storageCartList}
+      <Switch>
+        <Route
+          exact
+          path="/shop"
+          render={() => (
+            <ShopList
+              cartList={cartList}
+              products={products}
               addProductInCart={addProductInCart}
               removeProductFromCart={removeProductFromCart}
-              deletePurchasedProduct={deletePurchasedProduct}
             />
-          );
-        }}
-      />
+          )}
+        />
+        <Route
+          path="/cart-list"
+          exact
+          render={() => {
+            return (
+              <CartList
+                storageCartList={storageCartList}
+                addProductInCart={addProductInCart}
+                removeProductFromCart={removeProductFromCart}
+                deletePurchasedProduct={deletePurchasedProduct}
+              />
+            );
+          }}
+        />
+      </Switch>
     </main>
   );
 };
