@@ -7,23 +7,31 @@ const CartList = ({
   removeProductFromCart,
   deletePurchasedProduct,
 }) => {
-  return (
-    <ul className="cart-list">
-      {cartList.map((cart) => {
-        const { id } = cart;
+  const totalSum = Object.values(cartList)
+    .map((value) => value.totalPrice)
+    .reduce((sum, item) => (sum += item), 0);
 
-        return (
-          <li key={id}>
-            <CartListItem
-              cart={cart}
-              addProductInCart={addProductInCart}
-              removeProductFromCart={removeProductFromCart}
-              deletePurchasedProduct={deletePurchasedProduct}
-            />
-          </li>
-        );
-      })}
-    </ul>
+  return cartList.length ? (
+    <>
+      <ul className="cart-list">
+        {cartList.map((cart) => {
+          const { id } = cart;
+          return (
+            <li key={id}>
+              <CartListItem
+                cart={cart}
+                addProductInCart={addProductInCart}
+                removeProductFromCart={removeProductFromCart}
+                deletePurchasedProduct={deletePurchasedProduct}
+              />
+            </li>
+          );
+        })}
+      </ul>
+      {totalSum && <h2>Загальна сума: {totalSum}</h2>}
+    </>
+  ) : (
+    <h1>Ваша корзина пуста</h1>
   );
 };
 

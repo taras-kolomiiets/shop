@@ -12,7 +12,7 @@ const CartListItem = ({
     <div className="cart-list-item">
       <div className="cart-list-item__header">
         <div className="cart-list-item__image">
-          <img src={url} alt="Телефон" />
+          <img src={url} alt="Продукт" />
         </div>
         <h4 className="cart-list-item__name">{name}</h4>
       </div>
@@ -28,12 +28,12 @@ const CartListItem = ({
           -
         </button>
       </div>
-      <span className="cart-list-item__total-price">{totalPrice}</span>
+      <span className="cart-list-item__total-price">{totalPrice} $</span>
       <button
         className="cart-list-item__delete"
         onClick={() => deletePurchasedProduct(id)}
       >
-        Удалить
+        Видалити товар
       </button>
     </div>
   );

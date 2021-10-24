@@ -1,9 +1,15 @@
 import React from "react";
 
+import ButtonInCart from "./ButtonInCart";
 import productImage from "../../images/product.jpg";
 
-const ShopListItem = ({ product }) => {
-  const { name, label, price } = product;
+const ShopListItem = ({
+  cartList,
+  product,
+  addProductInCart,
+  removeProductFromCart,
+}) => {
+  const { name, label, price, id } = product;
 
   return (
     <div className="shop-list-item">
@@ -11,7 +17,7 @@ const ShopListItem = ({ product }) => {
         <div className="shop-list-item__image">
           <img
             src={productImage}
-            alt="Картинка телефона"
+            alt="Картинка продукту"
             className="shop-list-item__url"
           />
         </div>
@@ -19,9 +25,14 @@ const ShopListItem = ({ product }) => {
       </div>
       <div className="shop-list-item__content">
         <p className="shop-list-item__description">{label}</p>
-        <span className="shop-list-item__price">Цена: {price}</span>
+        <span className="shop-list-item__price">Ціна: {price} $</span>
       </div>
-      <button className="button">Купить</button>
+      <ButtonInCart
+        cartList={cartList}
+        id={id}
+        addProductInCart={addProductInCart}
+        removeProductFromCart={removeProductFromCart}
+      />
     </div>
   );
 };

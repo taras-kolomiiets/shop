@@ -1,5 +1,4 @@
 import React from "react";
-
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
@@ -7,7 +6,7 @@ const Navigation = () => {
     <ul className="navigation">
       <li className="navigation__item">
         <NavLink to="/" exact>
-          Главная
+          Головна
         </NavLink>
       </li>
       <li className="navigation__item">

@@ -92,7 +92,12 @@ const App = () => {
         path="/"
         exact
         render={() => (
-          <ShopList products={products} addProductInCart={addProductInCart} />
+          <ShopList
+            cartList={cartList}
+            products={products}
+            addProductInCart={addProductInCart}
+            removeProductFromCart={removeProductFromCart}
+          />
         )}
       />
       <Route
