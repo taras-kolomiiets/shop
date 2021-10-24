@@ -3,9 +3,9 @@ import CartListItem from "../CartListItem";
 
 const CartList = ({
   cartList,
-  addPhoneInCart,
-  removePhoneFromCart,
-  deletePurchasedPhone,
+  addProductInCart,
+  removeProductFromCart,
+  deletePurchasedProduct,
 }) => {
   return (
     <ul className="cart-list">
@@ -16,9 +16,9 @@ const CartList = ({
           <li key={id}>
             <CartListItem
               cart={cart}
-              addPhoneInCart={addPhoneInCart}
-              removePhoneFromCart={removePhoneFromCart}
-              deletePurchasedPhone={deletePurchasedPhone}
+              addProductInCart={addProductInCart}
+              removeProductFromCart={removeProductFromCart}
+              deletePurchasedProduct={deletePurchasedProduct}
             />
           </li>
         );

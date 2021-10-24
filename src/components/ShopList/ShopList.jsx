@@ -1,23 +1,23 @@
 import React from "react";
 import ShopListItem from "../ShopListItem";
 
-const ShopList = ({ phones, addPhoneInCart }) => {
+const ShopList = ({ products, addProductInCart }) => {
   return (
     <section className="shop-list">
       <ul className="shop-list__list">
         {
           // Перебираем массив объектов, передавая каждый в компонент CartListItem.
           // В li передаём key, равный id и говорим, что при клике на элемент вызывается переданная функция, принимая id элемента
-          phones.map((phone) => {
-            const { id } = phone;
+          products.map((product) => {
+            const { id } = product;
 
             return (
               <li
                 key={id.toString()}
                 className="shop-list__item"
-                onClick={() => addPhoneInCart(id)}
+                onClick={() => addProductInCart(id)}
               >
-                <ShopListItem phone={phone} />
+                <ShopListItem product={product} />
               </li>
             );
           })

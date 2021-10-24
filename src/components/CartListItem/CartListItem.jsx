@@ -1,6 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const CartListItem = ({ cart, addPhoneInCart, removePhoneFromCart, deletePurchasedPhone }) => {
+const CartListItem = ({
+  cart,
+  addProductInCart,
+  removeProductFromCart,
+  deletePurchasedProduct,
+}) => {
   const { name, url, count, totalPrice, id } = cart;
 
   return (
@@ -9,17 +14,29 @@ const CartListItem = ({ cart, addPhoneInCart, removePhoneFromCart, deletePurchas
         <div className="cart-list-item__image">
           <img src={url} alt="Телефон" />
         </div>
-        <h4 className='cart-list-item__name'>{name}</h4>
+        <h4 className="cart-list-item__name">{name}</h4>
       </div>
       <div>
-        <button className="button-cart" onClick={() => addPhoneInCart(id)}>+</button>
+        <button className="button-cart" onClick={() => addProductInCart(id)}>
+          +
+        </button>
         <span className="cart-list-item__count">{count}</span>
-        <button className="button-cart" onClick={() => removePhoneFromCart(id)}>-</button>
+        <button
+          className="button-cart"
+          onClick={() => removeProductFromCart(id)}
+        >
+          -
+        </button>
       </div>
       <span className="cart-list-item__total-price">{totalPrice}</span>
-      <button className="cart-list-item__delete" onClick={() => deletePurchasedPhone(id)}>Удалить</button>
+      <button
+        className="cart-list-item__delete"
+        onClick={() => deletePurchasedProduct(id)}
+      >
+        Удалить
+      </button>
     </div>
-  )
+  );
 };
 
 export default CartListItem;
