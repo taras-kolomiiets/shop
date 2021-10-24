@@ -10,7 +10,7 @@ const Navigation = () => {
         </NavLink>
       </li>
       <li className="navigation__item">
-        <NavLink to="cart-list">Корзина</NavLink>
+        <NavLink to="shop/cart-list">Корзина</NavLink>
       </li>
     </ul>
   );
