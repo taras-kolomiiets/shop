@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <ul className="navigation">
       <li className="navigation__item">
-        <NavLink to="/" exact>
+        <NavLink to={["/", "shop/"]} exact>
           Головна
         </NavLink>
       </li>
