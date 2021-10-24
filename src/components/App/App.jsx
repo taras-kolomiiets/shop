@@ -78,7 +78,7 @@ const App = () => {
     <main className="app">
       <Navigation />
       <Route
-        path={["/shop", "/shop/main"]}
+        path={["/", "/main"]}
         exact
         render={() => (
           <ShopList
@@ -90,7 +90,7 @@ const App = () => {
         )}
       />
       <Route
-        path="/shop/cart-list"
+        path="/cart-list"
         exact
         render={() => {
           return (
