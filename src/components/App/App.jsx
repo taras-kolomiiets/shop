@@ -90,7 +90,7 @@ const App = () => {
         )}
       />
       <Route
-        path="/shop/cart-list"
+        path="/cart-list"
         exact
         render={() => {
           return (
