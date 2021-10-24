@@ -30,7 +30,7 @@ const CartListItem = ({
       </div>
       <span className="cart-list-item__total-price">{totalPrice} $</span>
       <button
-        className="cart-list-item__delete"
+        className="button delete"
         onClick={() => deletePurchasedProduct(id)}
       >
         Видалити товар

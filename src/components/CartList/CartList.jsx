@@ -28,7 +28,12 @@ const CartList = ({
           );
         })}
       </ul>
-      {totalSum && <h2>Загальна сума: {totalSum}</h2>}
+      {totalSum && (
+        <h2 className="cart__total-price">
+          Загальна сума:{" "}
+          <span className="cart__total-price-number">{totalSum} $</span>
+        </h2>
+      )}
     </>
   ) : (
     <h1>Ваша корзина пуста</h1>
