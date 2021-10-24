@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { products } from "../../products";
 import CartList from "../CartList";
 import ShopList from "../ShopList";
@@ -77,34 +77,32 @@ const App = () => {
   return (
     <main className="app">
       <Navigation />
-      <Switch>
-        <Route
-          exact
-          path="/shop"
-          render={() => (
-            <ShopList
-              cartList={cartList}
-              products={products}
+      <Route
+        exact
+        path="/shop"
+        render={() => (
+          <ShopList
+            cartList={cartList}
+            products={products}
+            addProductInCart={addProductInCart}
+            removeProductFromCart={removeProductFromCart}
+          />
+        )}
+      />
+      <Route
+        path="/cart-list"
+        exact
+        render={() => {
+          return (
+            <CartList
+              storageCartList={storageCartList}
               addProductInCart={addProductInCart}
               removeProductFromCart={removeProductFromCart}
+              deletePurchasedProduct={deletePurchasedProduct}
             />
-          )}
-        />
-        <Route
-          path="/cart-list"
-          exact
-          render={() => {
-            return (
-              <CartList
-                storageCartList={storageCartList}
-                addProductInCart={addProductInCart}
-                removeProductFromCart={removeProductFromCart}
-                deletePurchasedProduct={deletePurchasedProduct}
-              />
-            );
-          }}
-        />
-      </Switch>
+          );
+        }}
+      />
     </main>
   );
 };
