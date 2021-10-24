@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/shop/static/css/main.35d8405f.chunk.css",
+    "main.js": "/shop/static/js/main.69058e14.chunk.js",
+    "main.js.map": "/shop/static/js/main.69058e14.chunk.js.map",
+    "runtime-main.js": "/shop/static/js/runtime-main.f4cb10b0.js",
+    "runtime-main.js.map": "/shop/static/js/runtime-main.f4cb10b0.js.map",
+    "static/js/2.33f5e6ae.chunk.js": "/shop/static/js/2.33f5e6ae.chunk.js",
+    "static/js/2.33f5e6ae.chunk.js.map": "/shop/static/js/2.33f5e6ae.chunk.js.map",
+    "index.html": "/shop/index.html",
+    "static/css/main.35d8405f.chunk.css.map": "/shop/static/css/main.35d8405f.chunk.css.map",
+    "static/js/2.33f5e6ae.chunk.js.LICENSE.txt": "/shop/static/js/2.33f5e6ae.chunk.js.LICENSE.txt",
+    "static/media/product.df114c5f.jpg": "/shop/static/media/product.df114c5f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4cb10b0.js",
+    "static/js/2.33f5e6ae.chunk.js",
+    "static/css/main.35d8405f.chunk.css",
+    "static/js/main.69058e14.chunk.js"
+  ]
+}
