@@ -2,19 +2,19 @@ import React from "react";
 import CartListItem from "../CartListItem";
 
 const CartList = ({
-  cartList,
+  storageCartList,
   addProductInCart,
   removeProductFromCart,
   deletePurchasedProduct,
 }) => {
-  const totalSum = Object.values(cartList)
+  const totalSum = Object.values(storageCartList)
     .map((value) => value.totalPrice)
     .reduce((sum, item) => (sum += item), 0);
 
-  return cartList.length ? (
+  return storageCartList.length ? (
     <>
       <ul className="cart-list">
-        {cartList.map((cart) => {
+        {storageCartList.map((cart) => {
           const { id } = cart;
           return (
             <li key={id}>

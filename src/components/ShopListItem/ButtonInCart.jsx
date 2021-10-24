@@ -15,7 +15,7 @@ const ButtonInCart = ({
       return;
     }
     setItemInCart(false);
-  }, [cartList]);
+  }, [cartList, item.length]);
 
   return itemInCart ? (
     <button className="button" onClick={() => removeProductFromCart(id)}>
@@ -23,7 +23,7 @@ const ButtonInCart = ({
     </button>
   ) : (
     <button className="button" onClick={() => addProductInCart(id)}>
-      Добавити
+      Придбати
     </button>
   );
 };
